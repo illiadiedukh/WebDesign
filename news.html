@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0C1112">
+	<meta name="description" content="Офіційні новини ФК «Полісся» Житомир: команда, інтерв'ю, академія та трансфери.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:title" content="Новини — ФК Полісся Житомир">
+	<meta property="og:description" content="Читайте останні новини футбольного клубу «Полісся» Житомир.">
+	<title>Новини — ФК Полісся Житомир</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://cdn.tailwindcss.com">
+	<link rel="preconnect" href="https://www.youtube.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="stylesheet" href="build/dist/tailwind.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page-shell">
+		<header class="header">
+			<a class="brand" href="index.html" aria-label="ФК Полісся, на головну"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир"><span class="brand-name">ПОЛІССЯ</span></a>
+			<nav class="header-nav" aria-label="Головна навігація">
+				<ul>
+					<li><a href="index.html">Головна</a></li>
+					<li><a href="matches.html">Матчі</a></li>
+					<li class="active"><a class="nav-link active" href="news.html" aria-current="page">Новини</a></li>
+					<li><a href="team.html">Команда</a></li>
+					<li><a href="standings.html">Турнірна таблиця</a></li>
+					<li><a href="club.html">Клуб</a></li>
+				</ul>
+			</nav>
+			<div class="header-actions">
+				<aside class="live-widget" aria-label="Матч-центр"><a class="live-mini" href="matches.html#fixtures"><i class="icon fas fa-futbol" aria-hidden="true"></i><span>Матч-центр</span></a></aside>
+				<a class="button button-primary header-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+				<button class="mobile-menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+					<i class="fas fa-bars icon-open" aria-hidden="true"></i>
+					<i class="fas fa-times icon-close" aria-hidden="true"></i>
+				</button>
+			</div>
+			<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація" aria-hidden="true" inert>
+				<a class="nav-link" href="index.html">Головна</a>
+				<a class="nav-link" href="matches.html">Матчі</a>
+				<a class="nav-link" href="standings.html">Турнірна таблиця</a>
+				<a class="nav-link active" href="news.html" aria-current="page">Новини</a>
+				<a class="nav-link" href="team.html">Команда</a>
+				<a class="nav-link" href="club.html">Клуб</a>
+				<a class="button button-primary mobile-nav-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="block-spacing" aria-labelledby="news-page-title">
+				<div class="container content-wrap">
+					<div class="section-heading">
+						<div class="section-title"><img class="section-icon" src="assets/icons/news.svg" width="700" height="700" alt="" loading="lazy"><div><p class="eyebrow">Історії клубу</p><h1 id="news-page-title">Новини</h1></div></div>
+					</div>
+
+					<article class="news-featured-story" aria-labelledby="featured-news-title">
+						<a class="news-image news-image-featured news-video-preview" href="news-polissya-novyi-rozdil.html" aria-label="Перейти до новини про матч Полісся – Новий Розділ"><i class="fas fa-play-circle" aria-hidden="true"></i></a>
+						<div class="news-featured-copy">
+							<div class="news-tags"><span class="category">#MatchDay</span><span class="category">#КубокУкраїни</span></div>
+							<h2 id="featured-news-title">Огляд матчу: Полісся – Новий Розділ | 1/8 фіналу Кубка України</h2>
+							<p>Яскрава перемога житомирян у кубковому протистоянні. Полісся перемогло Новий Розділ у матчі 1/8 фіналу Кубка України та вийшло до наступного раунду.</p>
+							<p>Дивіться відеоогляд найкращих моментів та забитих м'ячів.</p>
+							<a class="btn button button-primary" href="news-polissya-novyi-rozdil.html">Читати новину <i class="icon fas fa-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="block-spacing" aria-labelledby="all-news-title">
+				<div class="container content-wrap">
+					<div class="section-heading"><div><p class="eyebrow">Останні оновлення</p><h2 id="all-news-title">Усі новини</h2></div></div>
+					<div class="news-toolbar">
+						<div class="news-filters" role="group" aria-label="Фільтр новин за категорією">
+							<button class="btn button button-primary" type="button" aria-pressed="true">Усі</button>
+							<button class="btn button" type="button" aria-pressed="false">Команда</button>
+							<button class="btn button" type="button" aria-pressed="false">Тренування</button>
+							<button class="btn button" type="button" aria-pressed="false">Академія</button>
+							<button class="btn button" type="button" aria-pressed="false">Трансфери</button>
+						</div>
+						<form class="news-search" role="search" action="news.html" method="get">
+							<label class="visually-hidden" for="news-query">Пошук новин</label>
+							<input id="news-query" name="q" type="search" placeholder="Пошук новин">
+							<button class="btn button" type="submit" aria-label="Шукати"><i class="icon fas fa-search" aria-hidden="true"></i></button>
+						</form>
+					</div>
+
+					<div class="news-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" id="news-list">
+						<article class="news-item" id="article-1">
+							<div class="news-meta"><span class="category">#КОМАНДА</span></div>
+							<h3>Команда розпочала підготовку до наступного поєдинку Прем'єр-Ліги.</h3>
+						</article>
+						<article class="news-item" id="article-2">
+							<div class="news-meta"><span class="category">#АКАДЕМІЯ</span></div>
+							<h3>Вихованці академії ФК Полісся здобули перемогу на всеукраїнському турнірі.</h3>
+						</article>
+						<article class="news-item" id="article-3">
+							<div class="news-meta"><span class="category">#ІНТЕРВ'Ю</span></div>
+							<h3>Ексклюзивне інтерв'ю головного тренера про тактику та форму гравців.</h3>
+						</article>
+					</div>
+
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-main">
+				<h2 class="visually-hidden">Інформація про клуб</h2>
+				<div class="footer-brand"><a class="brand" href="index.html" aria-label="ФК Полісся, на початок сторінки"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир" loading="lazy"><span class="brand-name">ПОЛІССЯ</span></a><p>Житомир. Наш клуб. Наша сила.</p><p>Офіційний цифровий хаб Житомирського футбольного клубу «Полісся», який об'єднує вболівальників, висвітлює життя першої команди, діяльність юнацької академії та розвитку інфраструктури.</p></div>
+				<nav class="footer-column" aria-label="Навігація клубом"><h3>Клуб</h3><a href="index.html">Головна</a><a href="news.html">Новини</a><a href="matches.html">Матчі</a><a href="team.html">Команда</a><a href="club.html">Про клуб</a><a href="standings.html">Турнірна таблиця</a></nav>
+				<nav class="footer-column" aria-label="Інформація"><h3>Інформація</h3><a href="index.html#contact">Контакти</a><a href="index.html#contact">Партнерам</a><a href="index.html#contact">Пресслужба</a></nav>
+				<nav class="footer-column footer-social" aria-label="Соціальні мережі"><h3>Соціальні мережі</h3><a href="https://www.instagram.com/" aria-label="Instagram ФК Полісся">Instagram ↗</a><a href="https://www.facebook.com/" aria-label="Facebook ФК Полісся">Facebook ↗</a><a href="https://www.youtube.com/" aria-label="YouTube ФК Полісся">YouTube ↗</a></nav>
+			</div>
+			<div class="footer-bottom"><span>© 2026 ФК «Полісся» Житомир</span><a href="index.html#contact">Політика конфіденційності</a></div>
+		</footer>
+	</div>
+	<script src="assets/mobile-menu.js" defer></script>
+</body>
+</html>

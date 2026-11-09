@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0C1112">
+	<meta name="description" content="Календар матчів, результати та турнірне становище футбольного клубу «Полісся» Житомир.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:title" content="Матч-центр — ФК Полісся Житомир">
+	<meta property="og:description" content="Розклад, результати матчів і турнірна таблиця ФК «Полісся».">
+	<title>Матч-центр — ФК Полісся Житомир</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://cdn.tailwindcss.com">
+	<link rel="preconnect" href="https://www.youtube.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="stylesheet" href="build/dist/tailwind.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page-shell">
+		<header class="header">
+			<a class="brand" href="index.html" aria-label="ФК Полісся, на головну"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир"><span class="brand-name">ПОЛІССЯ</span></a>
+			<nav class="header-nav" aria-label="Головна навігація">
+				<ul>
+					<li><a href="index.html">Головна</a></li>
+					<li class="active"><a class="nav-link active" href="matches.html" aria-current="page">Матчі</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li><a href="team.html">Команда</a></li>
+					<li><a href="standings.html">Турнірна таблиця</a></li>
+					<li><a href="club.html">Клуб</a></li>
+				</ul>
+			</nav>
+			<div class="header-actions">
+				<aside class="live-widget" aria-label="Матч-центр"><a class="live-mini" href="#fixtures"><i class="icon fas fa-futbol" aria-hidden="true"></i><span>Матч-центр</span></a></aside>
+				<a class="button button-primary header-cta" href="#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+				<button class="mobile-menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+					<i class="fas fa-bars icon-open" aria-hidden="true"></i>
+					<i class="fas fa-times icon-close" aria-hidden="true"></i>
+				</button>
+			</div>
+			<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація" aria-hidden="true" inert>
+				<a class="nav-link" href="index.html">Головна</a>
+				<a class="nav-link active" href="matches.html" aria-current="page">Матчі</a>
+				<a class="nav-link" href="standings.html">Турнірна таблиця</a>
+				<a class="nav-link" href="news.html">Новини</a>
+				<a class="nav-link" href="team.html">Команда</a>
+				<a class="nav-link" href="club.html">Клуб</a>
+				<a class="button button-primary mobile-nav-cta" href="#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="block-spacing match-center-page" aria-labelledby="match-centre-title">
+				<div class="container content-wrap">
+					<div class="section-heading">
+						<div class="section-title">
+							<img class="section-icon" src="assets/icons/matches.svg" width="800" height="800" alt="" loading="lazy">
+							<div><p class="eyebrow">Українська Прем'єр-Ліга · Тур 11</p><h1 id="match-centre-title">Матч-центр</h1></div>
+						</div>
+					</div>
+
+					<article class="match-card match-featured" id="featured-match" aria-labelledby="featured-match-title">
+						<div class="match-card-top">
+							<span class="status-label"><i class="icon fas fa-calendar-days" aria-hidden="true"></i> ГОЛОВНИЙ МАТЧ · УПЛ · ТУР 11</span>
+						</div>
+						<h2 class="visually-hidden" id="featured-match-title">Полісся — Динамо (Київ)</h2>
+						<div class="match-score">
+							<div class="team"><img class="team-crest" src="assets/icons/logo.png" width="1024" height="1024" alt="Емблема ФК Полісся" loading="lazy"><span>Полісся</span></div>
+							<div class="score upcoming-score">VS</div>
+							<div class="team"><span class="team-crest team-crest-muted" aria-hidden="true">Д</span><span>Динамо (Київ)</span></div>
+						</div>
+						<div class="match-card-bottom"><span><i class="icon fas fa-location-dot" aria-hidden="true"></i> Центральний стадіон м. Житомир</span><span>УПЛ · Тур 11</span><a class="btn button button-primary" href="#featured-match">Купити квиток <i class="icon fas fa-arrow-right" aria-hidden="true"></i></a><a class="btn button" href="#featured-match">Трансляція <i class="icon fas fa-play" aria-hidden="true"></i></a></div>
+					</article>
+				</div>
+			</section>
+
+			<section class="block-spacing" id="fixtures" aria-labelledby="fixtures-title">
+				<div class="container content-wrap">
+					<div class="section-heading">
+						<div><p class="eyebrow">Календар сезону</p><h2 id="fixtures-title">Розклад та результати</h2></div>
+					</div>
+
+					<div class="match-filters" role="group" aria-label="Фільтр турнірів">
+						<button class="btn button button-primary" type="button" aria-pressed="true">Всі турніри</button>
+						<button class="btn button" type="button" aria-pressed="false">УПЛ</button>
+						<button class="btn button" type="button" aria-pressed="false">Кубок України</button>
+						<button class="btn button" type="button" aria-pressed="false">Товариські матчі</button>
+					</div>
+
+					<section class="match-month" aria-labelledby="october-title">
+						<h3 id="october-title">Результати</h3>
+						<div class="match-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+							<article class="match-card match-result" aria-labelledby="match-kolos-title">
+								<div class="match-card-top"><span class="status-label"><i class="icon fas fa-flag-checkered" aria-hidden="true"></i> ЗАВЕРШЕНО · УПЛ · ТУР 10</span></div>
+								<h4 class="visually-hidden" id="match-kolos-title">Полісся — Колос</h4>
+								<div class="match-score"><div class="team"><img class="team-crest" src="assets/icons/logo.png" width="1024" height="1024" alt="Емблема ФК Полісся" loading="lazy"><span>Полісся</span></div><div class="score">2 <span>:</span> 1</div><div class="team"><span class="team-crest team-crest-muted" aria-hidden="true">К</span><span>Колос</span></div></div>
+								<div class="match-card-bottom"><span>УПЛ · Тур 10</span></div>
+							</article>
+							<article class="match-card match-result" aria-labelledby="match-veres-title">
+								<div class="match-card-top"><span class="status-label"><i class="icon fas fa-flag-checkered" aria-hidden="true"></i> ЗАВЕРШЕНО · УПЛ · ТУР 9</span></div>
+								<h4 class="visually-hidden" id="match-veres-title">Верес — Полісся</h4>
+								<div class="match-score"><div class="team"><span class="team-crest team-crest-muted" aria-hidden="true">В</span><span>Верес</span></div><div class="score">0 <span>:</span> 1</div><div class="team"><img class="team-crest" src="assets/icons/logo.png" width="1024" height="1024" alt="Емблема ФК Полісся" loading="lazy"><span>Полісся</span></div></div>
+								<div class="match-card-bottom"><span>УПЛ · Тур 9</span></div>
+							</article>
+							<article class="match-card match-result" aria-labelledby="match-novyi-rozdil-title">
+								<div class="match-card-top"><span class="status-label"><i class="icon fas fa-flag-checkered" aria-hidden="true"></i> ЗАВЕРШЕНО · КУБОК УКРАЇНИ · 1/8 ФІНАЛУ</span></div>
+								<h4 class="visually-hidden" id="match-novyi-rozdil-title">Полісся – Новий Розділ</h4>
+								<div class="match-score"><div class="team"><img class="team-crest" src="assets/icons/logo.png" width="1024" height="1024" alt="Емблема ФК Полісся" loading="lazy"><span>Полісся</span></div><div class="score upcoming-score" aria-label="Перемога ФК Полісся">ВИХІД<br>ДАЛІ</div><div class="team"><span class="team-crest team-crest-muted" aria-hidden="true">Н</span><span>Новий Розділ</span></div></div>
+								<div class="match-card-bottom"><span>Кубок України · 1/8 фіналу</span><a class="text-link" href="news-polissya-novyi-rozdil.html">Огляд матчу <i class="icon fas fa-arrow-right" aria-hidden="true"></i></a></div>
+							</article>
+						</div>
+					</section>
+
+					<section class="match-month" aria-labelledby="november-title">
+						<h3 id="november-title">Наступний матч</h3>
+						<div class="match-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+							<article class="match-card" aria-labelledby="match-shakhtar-title">
+								<div class="match-card-top"><span class="status-label"><i class="icon fas fa-calendar-days" aria-hidden="true"></i> АНОНС · УПЛ · ТУР 12</span></div>
+								<h4 class="visually-hidden" id="match-shakhtar-title">Полісся — Шахтар</h4>
+								<div class="match-score"><div class="team"><img class="team-crest" src="assets/icons/logo.png" width="1024" height="1024" alt="Емблема ФК Полісся" loading="lazy"><span>Полісся</span></div><div class="score upcoming-score">VS</div><div class="team"><span class="team-crest team-crest-muted" aria-hidden="true">Ш</span><span>Шахтар</span></div></div>
+								<div class="match-card-bottom"><span>УПЛ · Тур 12</span><a href="#featured-match">Квитки <i class="icon fas fa-ticket" aria-hidden="true"></i></a></div>
+							</article>
+						</div>
+					</section>
+				</div>
+			</section>
+
+			<section class="block-spacing" aria-labelledby="table-title">
+				<div class="container content-wrap">
+					<div class="section-heading"><div class="section-title"><img class="section-icon" src="assets/icons/table.svg" width="730" height="730" alt="" loading="lazy"><div><p class="eyebrow">Українська Прем'єр-Ліга</p><h2 id="table-title">Турнірна таблиця</h2></div></div></div>
+					<div class="standings-table-wrap">
+						<table class="standings-table">
+							<caption class="visually-hidden">Скорочена турнірна таблиця Української Прем'єр-ліги</caption>
+							<thead><tr><th scope="col">#</th><th scope="col">Команда</th><th scope="col">І</th><th scope="col">В</th><th scope="col">Н</th><th scope="col">П</th><th scope="col">О</th></tr></thead>
+							<tbody>
+								<tr><td>1</td><td>Шахтар Донецьк</td><td>11</td><td>9</td><td>1</td><td>1</td><td>28</td></tr>
+								<tr class="standings-current"><td>2</td><td><strong>Полісся Житомир</strong></td><td>10</td><td>8</td><td>1</td><td>1</td><td><strong>25</strong></td></tr>
+								<tr><td>3</td><td>Харків</td><td>9</td><td>7</td><td>0</td><td>2</td><td>21</td></tr>
+								<tr><td>4</td><td>Динамо Київ</td><td>9</td><td>6</td><td>1</td><td>2</td><td>19</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<a class="btn button text-link" href="standings.html">Повна таблиця <i class="icon fas fa-arrow-right" aria-hidden="true"></i></a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-main">
+				<h2 class="visually-hidden">Інформація про клуб</h2>
+				<div class="footer-brand"><a class="brand" href="index.html" aria-label="ФК Полісся, на початок сторінки"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир" loading="lazy"><span class="brand-name">ПОЛІССЯ</span></a><p>Житомир. Наш клуб. Наша сила.</p><p>Офіційний цифровий хаб Житомирського футбольного клубу «Полісся», який об'єднує вболівальників, висвітлює життя першої команди, діяльність юнацької академії та розвитку інфраструктури.</p></div>
+				<nav class="footer-column" aria-label="Навігація клубом"><h3>Клуб</h3><a href="index.html">Головна</a><a href="news.html">Новини</a><a href="matches.html">Матчі</a><a href="team.html">Команда</a><a href="club.html">Про клуб</a><a href="standings.html">Турнірна таблиця</a></nav>
+				<nav class="footer-column" aria-label="Інформація"><h3>Інформація</h3><a href="index.html#contact">Контакти</a><a href="index.html#contact">Партнерам</a><a href="index.html#contact">Пресслужба</a></nav>
+				<nav class="footer-column footer-social" aria-label="Соціальні мережі"><h3>Соціальні мережі</h3><a href="https://www.instagram.com/" aria-label="Instagram ФК Полісся">Instagram ↗</a><a href="https://www.facebook.com/" aria-label="Facebook ФК Полісся">Facebook ↗</a><a href="https://www.youtube.com/" aria-label="YouTube ФК Полісся">YouTube ↗</a></nav>
+			</div>
+			<div class="footer-bottom"><span>© 2026 ФК «Полісся» Житомир</span><a href="index.html#contact">Політика конфіденційності</a></div>
+		</footer>
+	</div>
+	<script src="assets/mobile-menu.js" defer></script>
+</body>
+</html>

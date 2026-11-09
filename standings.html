@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0C1112">
+	<meta name="description" content="Турнірна таблиця Української Прем'єр-Ліги, результати та статистика ФК «Полісся» Житомир.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:title" content="Турнірна таблиця — ФК Полісся Житомир">
+	<meta property="og:description" content="Поточне становище клубу в УПЛ, форма команди та статистика сезону.">
+	<title>Турнірна таблиця — ФК Полісся Житомир</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://cdn.tailwindcss.com">
+	<link rel="preconnect" href="https://www.youtube.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="stylesheet" href="build/dist/tailwind.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page-shell">
+		<header class="header">
+			<a class="brand" href="index.html" aria-label="ФК Полісся, на головну"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир"><span class="brand-name">ПОЛІССЯ</span></a>
+			<nav class="header-nav" aria-label="Головна навігація">
+				<ul>
+					<li><a href="index.html">Головна</a></li>
+					<li><a href="matches.html">Матчі</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li><a href="team.html">Команда</a></li>
+					<li class="active"><a class="nav-link active" href="standings.html" aria-current="page">Турнірна таблиця</a></li>
+					<li><a href="club.html">Клуб</a></li>
+				</ul>
+			</nav>
+			<div class="header-actions">
+				<aside class="live-widget" aria-label="Матч-центр"><a class="live-mini" href="matches.html#fixtures"><i class="icon fas fa-futbol" aria-hidden="true"></i><span>Матч-центр</span></a></aside>
+				<a class="button button-primary header-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+				<button class="mobile-menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+					<i class="fas fa-bars icon-open" aria-hidden="true"></i>
+					<i class="fas fa-times icon-close" aria-hidden="true"></i>
+				</button>
+			</div>
+			<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація" aria-hidden="true" inert>
+				<a class="nav-link" href="index.html">Головна</a>
+				<a class="nav-link" href="matches.html">Матчі</a>
+				<a class="nav-link active" href="standings.html" aria-current="page">Турнірна таблиця</a>
+				<a class="nav-link" href="news.html">Новини</a>
+				<a class="nav-link" href="team.html">Команда</a>
+				<a class="nav-link" href="club.html">Клуб</a>
+				<a class="button button-primary mobile-nav-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="block-spacing" aria-labelledby="standings-page-title">
+				<div class="content-wrap">
+					<div class="section-heading">
+						<div class="section-title"><img class="section-icon" src="assets/icons/table.svg" width="730" height="730" alt="" loading="lazy"><div><p class="eyebrow">Українська Прем'єр-Ліга · Поточний сезон</p><h1 id="standings-page-title">Турнірна таблиця УПЛ</h1></div></div>
+						<a class="text-link" href="matches.html">Календар матчів <i class="icon fas fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+					<p class="standings-demo-note">Поточне турнірне становище команд Української Прем'єр-Ліги.</p>
+
+					<div class="standings-table-wrap" tabindex="0" aria-label="Таблиця УПЛ; на вузькому екрані прокручується горизонтально">
+						<table class="standings-table">
+							<caption class="visually-hidden">Турнірна таблиця Української Прем'єр-Ліги поточного сезону</caption>
+							<thead><tr><th scope="col">#</th><th scope="col">Клуб</th><th scope="col" title="Ігри">І</th><th scope="col" title="Перемоги">В</th><th scope="col" title="Нічиї">Н</th><th scope="col" title="Поразки">П</th><th scope="col" title="Забиті — пропущені">ЗМ-ПМ</th><th scope="col" title="Різниця м'ячів">РМ</th><th scope="col" title="Очки">О</th><th scope="col">Останні 5 матчів</th></tr></thead>
+							<tbody>
+								<tr class="zone-champions"><td>1</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Ш</span>Шахтар Донецьк</span></th><td>11</td><td>9</td><td>1</td><td>1</td><td>22:5</td><td>+17</td><td>28</td><td><span class="form-list" aria-label="Форма: перемога, перемога, перемога, нічия, перемога"><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result draw">Н</span><span class="form-result win">В</span></span></td></tr>
+								<tr class="standings-polissya zone-champions"><td>2</td><th scope="row"><span class="table-team"><img class="table-team-logo" src="assets/icons/logo.png" width="1024" height="1024" alt="" loading="lazy">Полісся Житомир</span></th><td>10</td><td>8</td><td>1</td><td>1</td><td>23:8</td><td>+15</td><td>25</td><td><span class="form-list" aria-label="Форма: перемога, перемога, нічия, перемога, перемога"><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result draw">Н</span><span class="form-result win">В</span><span class="form-result win">В</span></span></td></tr>
+								<tr><td>3</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Х</span>Харків</span></th><td>9</td><td>7</td><td>0</td><td>2</td><td>18:7</td><td>+11</td><td>21</td><td><span class="form-list" aria-label="Форма: перемога, перемога, перемога, перемога, перемога"><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result win">В</span></span></td></tr>
+								<tr><td>4</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Д</span>Динамо Київ</span></th><td>9</td><td>6</td><td>1</td><td>2</td><td>14:9</td><td>+5</td><td>19</td><td><span class="form-list" aria-label="Форма: перемога, перемога, перемога, поразка, перемога"><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result loss">П</span><span class="form-result win">В</span></span></td></tr>
+								<tr><td>5</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">К</span>Карпати Львів</span></th><td>10</td><td>4</td><td>4</td><td>2</td><td>17:8</td><td>+9</td><td>16</td><td><span class="form-list" aria-label="Форма: перемога, нічия, поразка, нічия, нічия"><span class="form-result win">В</span><span class="form-result draw">Н</span><span class="form-result loss">П</span><span class="form-result draw">Н</span><span class="form-result draw">Н</span></span></td></tr>
+								<tr><td>6</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Л</span>ЛНЗ</span></th><td>10</td><td>4</td><td>3</td><td>3</td><td>10:9</td><td>+1</td><td>15</td><td><span class="form-list" aria-label="Форма: перемога, поразка, перемога, перемога, нічия"><span class="form-result win">В</span><span class="form-result loss">П</span><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result draw">Н</span></span></td></tr>
+								<tr><td>7</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">З</span>Зоря</span></th><td>10</td><td>4</td><td>3</td><td>3</td><td>12:13</td><td>-1</td><td>15</td><td><span class="form-list" aria-label="Форма: нічия, поразка, перемога, перемога, нічия"><span class="form-result draw">Н</span><span class="form-result loss">П</span><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result draw">Н</span></span></td></tr>
+								<tr><td>8</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">К</span>Колос Ковалівка</span></th><td>9</td><td>3</td><td>2</td><td>4</td><td>12:13</td><td>-1</td><td>11</td><td><span class="form-list" aria-label="Форма: поразка, перемога, перемога, поразка, перемога"><span class="form-result loss">П</span><span class="form-result win">В</span><span class="form-result win">В</span><span class="form-result loss">П</span><span class="form-result win">В</span></span></td></tr>
+								<tr><td>9</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Ч</span>Чорноморець</span></th><td>10</td><td>2</td><td>3</td><td>5</td><td>8:12</td><td>-4</td><td>9</td><td><span class="form-list" aria-label="Форма: нічия, поразка, поразка, нічия, перемога"><span class="form-result draw">Н</span><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result draw">Н</span><span class="form-result win">В</span></span></td></tr>
+								<tr><td>10</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Е</span>Епіцентр</span></th><td>10</td><td>2</td><td>3</td><td>5</td><td>10:14</td><td>-4</td><td>9</td><td><span class="form-list" aria-label="Форма: поразка, поразка, поразка, нічия, поразка"><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result draw">Н</span><span class="form-result loss">П</span></span></td></tr>
+								<tr><td>11</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Б</span>Буковина</span></th><td>10</td><td>1</td><td>6</td><td>3</td><td>7:12</td><td>-5</td><td>9</td><td><span class="form-list" aria-label="Форма: нічия, поразка, нічия, поразка, нічия"><span class="form-result draw">Н</span><span class="form-result loss">П</span><span class="form-result draw">Н</span><span class="form-result loss">П</span><span class="form-result draw">Н</span></span></td></tr>
+								<tr><td>12</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">В</span>Верес</span></th><td>11</td><td>2</td><td>3</td><td>6</td><td>7:16</td><td>-9</td><td>9</td><td><span class="form-list" aria-label="Форма: перемога, поразка, поразка, поразка, поразка"><span class="form-result win">В</span><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result loss">П</span></span></td></tr>
+								<tr><td>13</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">Л</span>Лівий берег</span></th><td>9</td><td>1</td><td>5</td><td>3</td><td>6:8</td><td>-2</td><td>8</td><td><span class="form-list" aria-label="Форма: поразка, перемога, поразка, поразка, нічия"><span class="form-result loss">П</span><span class="form-result win">В</span><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result draw">Н</span></span></td></tr>
+								<tr class="zone-relegation"><td>14</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">О</span>Оболонь-Бровар</span></th><td>10</td><td>1</td><td>4</td><td>5</td><td>4:17</td><td>-13</td><td>7</td><td><span class="form-list" aria-label="Форма: поразка, нічия, перемога, поразка, поразка"><span class="form-result loss">П</span><span class="form-result draw">Н</span><span class="form-result win">В</span><span class="form-result loss">П</span><span class="form-result loss">П</span></span></td></tr>
+								<tr class="zone-relegation"><td>15</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">К</span>Кривбас</span></th><td>8</td><td>1</td><td>3</td><td>4</td><td>7:13</td><td>-6</td><td>6</td><td><span class="form-list" aria-label="Форма: поразка, нічия, поразка, поразка, нічия"><span class="form-result loss">П</span><span class="form-result draw">Н</span><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result draw">Н</span></span></td></tr>
+								<tr class="zone-relegation"><td>16</td><th scope="row"><span class="table-team"><span class="team-monogram" aria-hidden="true">К</span>Кудрівка</span></th><td>10</td><td>1</td><td>2</td><td>7</td><td>11:24</td><td>-13</td><td>5</td><td><span class="form-list" aria-label="Форма: поразка, поразка, поразка, перемога, поразка"><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result loss">П</span><span class="form-result win">В</span><span class="form-result loss">П</span></span></td></tr>
+							</tbody>
+						</table>
+					</div>
+					<ul class="standings-legend" aria-label="Позначення зон турнірної таблиці"><li><span class="zone-marker zone-marker-champions" aria-hidden="true"></span>Зона єврокубків (1–2 місця)</li><li><span class="zone-marker zone-marker-relegation" aria-hidden="true"></span>Зона вильоту (14–16 місця)</li></ul>
+
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-main">
+				<h2 class="visually-hidden">Інформація про клуб</h2>
+				<div class="footer-brand"><a class="brand" href="index.html" aria-label="ФК Полісся, на початок сторінки"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир" loading="lazy"><span class="brand-name">ПОЛІССЯ</span></a><p>Житомир. Наш клуб. Наша сила.</p><p>Офіційний цифровий хаб Житомирського футбольного клубу «Полісся», який об'єднує вболівальників, висвітлює життя першої команди, діяльність юнацької академії та розвитку інфраструктури.</p></div>
+				<nav class="footer-column" aria-label="Навігація клубом"><h3>Клуб</h3><a href="index.html">Головна</a><a href="news.html">Новини</a><a href="matches.html">Матчі</a><a href="team.html">Команда</a><a href="club.html">Про клуб</a><a href="standings.html">Турнірна таблиця</a></nav>
+				<nav class="footer-column" aria-label="Інформація"><h3>Інформація</h3><a href="index.html#contact">Контакти</a><a href="index.html#contact">Партнерам</a><a href="index.html#contact">Пресслужба</a></nav>
+				<nav class="footer-column footer-social" aria-label="Соціальні мережі"><h3>Соціальні мережі</h3><a href="https://www.instagram.com/" aria-label="Instagram ФК Полісся">Instagram ↗</a><a href="https://www.facebook.com/" aria-label="Facebook ФК Полісся">Facebook ↗</a><a href="https://www.youtube.com/" aria-label="YouTube ФК Полісся">YouTube ↗</a></nav>
+			</div>
+			<div class="footer-bottom"><span>© 2026 ФК «Полісся» Житомир</span><a href="index.html#contact">Політика конфіденційності</a></div>
+		</footer>
+	</div>
+	<script src="assets/mobile-menu.js" defer></script>
+</body>
+</html>

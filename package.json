@@ -1,0 +1,12 @@
+{
+  "name": "polissia-club-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./build/dist/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./build/dist/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.0",
+    "tailwindcss": "4.3.3"
+  }
+}

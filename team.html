@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0C1112">
+	<meta name="description" content="Гравці та тренерський штаб футбольного клубу «Полісся» Житомир.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:title" content="Команда — ФК Полісся Житомир">
+	<meta property="og:description" content="Знайомтеся зі складом і тренерським штабом ФК «Полісся».">
+	<title>Команда — ФК Полісся Житомир</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://cdn.tailwindcss.com">
+	<link rel="preconnect" href="https://www.youtube.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="stylesheet" href="build/dist/tailwind.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page-shell">
+		<header class="header">
+			<a class="brand" href="index.html" aria-label="ФК Полісся, на головну"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир"><span class="brand-name">ПОЛІССЯ</span></a>
+			<nav class="header-nav" aria-label="Головна навігація">
+				<ul>
+					<li><a href="index.html">Головна</a></li>
+					<li><a href="matches.html">Матчі</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li class="active"><a class="nav-link active" href="team.html" aria-current="page">Команда</a></li>
+					<li><a href="standings.html">Турнірна таблиця</a></li>
+					<li><a href="club.html">Клуб</a></li>
+				</ul>
+			</nav>
+			<div class="header-actions">
+				<aside class="live-widget" aria-label="Матч-центр"><a class="live-mini" href="matches.html#fixtures"><i class="icon fas fa-futbol" aria-hidden="true"></i><span>Матч-центр</span></a></aside>
+				<a class="button button-primary header-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+				<button class="mobile-menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+					<i class="fas fa-bars icon-open" aria-hidden="true"></i>
+					<i class="fas fa-times icon-close" aria-hidden="true"></i>
+				</button>
+			</div>
+			<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація" aria-hidden="true" inert>
+				<a class="nav-link" href="index.html">Головна</a>
+				<a class="nav-link" href="matches.html">Матчі</a>
+				<a class="nav-link" href="standings.html">Турнірна таблиця</a>
+				<a class="nav-link" href="news.html">Новини</a>
+				<a class="nav-link active" href="team.html" aria-current="page">Команда</a>
+				<a class="nav-link" href="club.html">Клуб</a>
+				<a class="button button-primary mobile-nav-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="block-spacing" aria-labelledby="team-title">
+				<div class="content-wrap">
+					<div class="section-heading">
+						<div class="section-title"><div><p class="eyebrow">Гравці клубу</p><h1 id="team-title">Команда</h1></div></div>
+					</div>
+					<p class="roster-note">Інформація про гравців на цій сторінці обмежена підтвердженими даними.</p>
+
+					<div class="squad-filters" role="group" aria-label="Фільтр складу за амплуа">
+						<button class="button button-primary" type="button" data-filter="all" aria-pressed="true">Всі</button>
+						<button class="button" type="button" data-filter="goalkeeper" aria-pressed="false">Воротарі</button>
+						<button class="button" type="button" data-filter="defender" aria-pressed="false">Захисники</button>
+						<button class="button" type="button" data-filter="midfielder" aria-pressed="false">Півзахисники</button>
+						<button class="button" type="button" data-filter="forward" aria-pressed="false">Нападники</button>
+						<button class="button" type="button" data-filter="staff" aria-pressed="false">Тренерський штаб</button>
+					</div>
+
+					<div class="squad-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+						<article class="player-card" data-position="goalkeeper" aria-labelledby="player-23-name">
+							<div class="player-photo-wrap"><span class="player-number">#23</span><img class="player-photo" src="assets/images/goalkeeper.png" alt="Євген Волинець" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ВОРОТАР</span><h2 id="player-23-name">ЄВГЕН ВОЛИНЕЦЬ</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 12</span><span><strong>Сухі матчі</strong> 5</span></div></div>
+						</article>
+						<article class="player-card" data-position="defender" aria-labelledby="player-15-name">
+							<div class="player-photo-wrap"><span class="player-number">#15</span><img class="player-photo" src="assets/images/mihailichenko.jpg" alt="Богдан Михайліченко" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ЗАХИСНИК</span><h2 id="player-15-name">БОГДАН МИХАЙЛІЧЕНКО</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 13</span><span><strong>Голи</strong> 0</span></div></div>
+						</article>
+						<article class="player-card" data-position="defender" aria-labelledby="player-5-name">
+							<div class="player-photo-wrap"><span class="player-number">#5</span><img class="player-photo" src="assets/images/sarapiy.jpg" alt="Едуард Сарапій" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ЗАХИСНИК</span><h2 id="player-5-name">ЕДУАРД САРАПІЙ</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 12</span><span><strong>Голи</strong> 2</span></div></div>
+						</article>
+						<article class="player-card" data-position="defender" aria-labelledby="player-44-name">
+							<div class="player-photo-wrap"><span class="player-number">#44</span><img class="player-photo" src="assets/images/chobotenko.jpg" alt="Сергій Чоботенко" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ЗАХИСНИК</span><h2 id="player-44-name">СЕРГІЙ ЧОБОТЕНКО</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 11</span><span><strong>Голи</strong> 1</span></div></div>
+						</article>
+						<article class="player-card" data-position="defender" aria-labelledby="player-31-name">
+							<div class="player-photo-wrap"><span class="player-number">#31</span><img class="player-photo" src="assets/images/maisuradze.jpg" alt="Гіоргі Майсурадзе" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ЗАХИСНИК</span><h2 id="player-31-name">ГІОРГІ МАЙСУРАДЗЕ</h2><p class="player-country"><span aria-hidden="true">🇬🇪</span> GE Грузія</p><div class="player-stats"><span><strong>Матчі</strong> 9</span><span><strong>Голи</strong> 0</span></div></div>
+						</article>
+						<article class="player-card" data-position="midfielder" aria-labelledby="player-7-name">
+							<div class="player-photo-wrap"><span class="player-number">#7</span><img class="player-photo" src="assets/images/nazarenko.jpg" alt="Олександр Назаренко" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ПІВЗАХИСНИК</span><h2 id="player-7-name">ОЛЕКСАНДР НАЗАРЕНКО</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 13</span><span><strong>Голи</strong> 6</span></div></div>
+						</article>
+						<article class="player-card" data-position="midfielder" aria-labelledby="player-8-name">
+							<div class="player-photo-wrap"><span class="player-number">#8</span><img class="player-photo" src="assets/images/babenko.jpg" alt="Руслан Бабенко" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ПІВЗАХИСНИК</span><h2 id="player-8-name">РУСЛАН БАБЕНКО</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 12</span><span><strong>Голи</strong> 1</span></div></div>
+						</article>
+						<article class="player-card" data-position="midfielder" aria-labelledby="player-18-name">
+							<div class="player-photo-wrap"><span class="player-number">#18</span><img class="player-photo" src="assets/images/andrievskiy.jpg" alt="Олександр Андрієвський" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ПІВЗАХИСНИК</span><h2 id="player-18-name">ОЛЕКСАНДР АНДРІЄВСЬКИЙ</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 10</span><span><strong>Голи</strong> 1</span></div></div>
+						</article>
+						<article class="player-card" data-position="midfielder" aria-labelledby="player-55-name">
+							<div class="player-photo-wrap"><span class="player-number">#55</span><img class="player-photo" src="assets/images/krushinskiy.jpg" alt="Борис Крушинський" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ПІВЗАХИСНИК</span><h2 id="player-55-name">БОРИС КРУШИНСЬКИЙ</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 11</span><span><strong>Голи</strong> 0</span></div></div>
+						</article>
+						<article class="player-card" data-position="midfielder" aria-labelledby="player-11-name">
+							<div class="player-photo-wrap"><span class="player-number">#11</span><img class="player-photo" src="assets/images/livramenko.jpg" alt="Леандру Лівраменто" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ПІВЗАХИСНИК</span><h2 id="player-11-name">ЛЕАНДРУ ЛІВРАМЕНТЕ</h2><p class="player-country"><span aria-hidden="true">🇵🇹</span> PT Португалія</p><div class="player-stats"><span><strong>Матчі</strong> 9</span><span><strong>Голи</strong> 2</span></div></div>
+						</article>
+						<article class="player-card" data-position="midfielder" aria-labelledby="player-45-name">
+							<div class="player-photo-wrap"><span class="player-number">#45</span><img class="player-photo" src="assets/images/braharu.jpg" alt="Максим Брагару" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">ПІВЗАХИСНИК</span><h2 id="player-45-name">МАКСИМ БРАГАРУ</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 10</span><span><strong>Голи</strong> 1</span></div></div>
+						</article>
+						<article class="player-card" data-position="forward" aria-labelledby="player-95-name">
+							<div class="player-photo-wrap"><span class="player-number">#95</span><img class="player-photo" src="assets/images/krasnopir.jpg" alt="Ігор Краснопір" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">НАПАДНИК</span><h2 id="player-95-name">ІГОР КРАСНОПІР</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 12</span><span><strong>Голи</strong> 7</span></div></div>
+						</article>
+						<article class="player-card" data-position="forward" aria-labelledby="player-9-name">
+							<div class="player-photo-wrap"><span class="player-number">#9</span><img class="player-photo" src="assets/images/filipov.jpg" alt="Олександр Філіппов" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">НАПАДНИК</span><h2 id="player-9-name">ОЛЕКСАНДР ФІЛІППОВ</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 11</span><span><strong>Голи</strong> 4</span></div></div>
+						</article>
+						<article class="player-card" data-position="forward" aria-labelledby="player-89-name">
+							<div class="player-photo-wrap"><span class="player-number">#89</span><img class="player-photo" src="assets/images/gaiduchik.jpg" alt="Микола Гайдукчик" loading="lazy" width="168" height="226"></div>
+							<div class="player-info"><span class="player-position">НАПАДНИК</span><h2 id="player-89-name">МИКОЛА ГАЙДУЧИК</h2><p class="player-country"><span aria-hidden="true">🇺🇦</span> UA Україна</p><div class="player-stats"><span><strong>Матчі</strong> 8</span><span><strong>Голи</strong> 3</span></div></div>
+						</article>
+					</div>
+					<p class="roster-note" data-roster-empty aria-live="polite" hidden>Для цієї категорії поки немає карток.</p>
+				</div>
+			</section>
+
+			<section class="block-spacing" aria-labelledby="staff-title">
+				<div class="content-wrap">
+					<div class="section-heading"><div><p class="eyebrow">Персонал клубу</p><h2 id="staff-title">Тренерський штаб та медичний персонал</h2></div></div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-main">
+				<h2 class="visually-hidden">Інформація про клуб</h2>
+				<div class="footer-brand"><a class="brand" href="index.html" aria-label="ФК Полісся, на початок сторінки"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир" loading="lazy"><span class="brand-name">ПОЛІССЯ</span></a><p>Житомир. Наш клуб. Наша сила.</p><p>Офіційний цифровий хаб Житомирського футбольного клубу «Полісся», який об'єднує вболівальників, висвітлює життя першої команди, діяльність юнацької академії та розвитку інфраструктури.</p></div>
+				<nav class="footer-column" aria-label="Навігація клубом"><h3>Клуб</h3><a href="index.html">Головна</a><a href="news.html">Новини</a><a href="matches.html">Матчі</a><a href="team.html">Команда</a><a href="club.html">Про клуб</a><a href="standings.html">Турнірна таблиця</a></nav>
+				<nav class="footer-column" aria-label="Інформація"><h3>Інформація</h3><a href="index.html#contact">Контакти</a><a href="index.html#contact">Партнерам</a><a href="index.html#contact">Пресслужба</a></nav>
+				<nav class="footer-column footer-social" aria-label="Соціальні мережі"><h3>Соціальні мережі</h3><a href="https://www.instagram.com/" aria-label="Instagram ФК Полісся">Instagram ↗</a><a href="https://www.facebook.com/" aria-label="Facebook ФК Полісся">Facebook ↗</a><a href="https://www.youtube.com/" aria-label="YouTube ФК Полісся">YouTube ↗</a></nav>
+			</div>
+			<div class="footer-bottom"><span>© 2026 ФК «Полісся» Житомир</span><a href="index.html#contact">Політика конфіденційності</a></div>
+		</footer>
+	</div>
+	<script src="assets/mobile-menu.js" defer></script>
+	<script src="assets/squad-filters.js" defer></script>
+</body>
+</html>

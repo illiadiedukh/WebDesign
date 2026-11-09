@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0C1112">
+	<meta name="description" content="Історія, інфраструктура та керівництво футбольного клубу «Полісся» Житомир.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:title" content="Клуб — ФК Полісся Житомир">
+	<meta property="og:description" content="Дізнайтеся більше про історію та інфраструктуру ФК «Полісся».">
+	<title>Клуб — ФК Полісся Житомир</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://cdn.tailwindcss.com">
+	<link rel="preconnect" href="https://www.youtube.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="stylesheet" href="build/dist/tailwind.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page-shell">
+		<header class="header">
+			<a class="brand" href="index.html" aria-label="ФК Полісся, на головну"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир"><span class="brand-name">ПОЛІССЯ</span></a>
+			<nav class="header-nav" aria-label="Головна навігація">
+				<ul>
+					<li><a href="index.html">Головна</a></li>
+					<li><a href="matches.html">Матчі</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li><a href="team.html">Команда</a></li>
+					<li><a href="standings.html">Турнірна таблиця</a></li>
+					<li class="active"><a class="nav-link active" href="club.html" aria-current="page">Клуб</a></li>
+				</ul>
+			</nav>
+			<div class="header-actions">
+				<aside class="live-widget" aria-label="Матч-центр"><a class="live-mini" href="matches.html#fixtures"><i class="icon fas fa-futbol" aria-hidden="true"></i><span>Матч-центр</span></a></aside>
+				<a class="button button-primary header-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+				<button class="mobile-menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+					<i class="fas fa-bars icon-open" aria-hidden="true"></i>
+					<i class="fas fa-times icon-close" aria-hidden="true"></i>
+				</button>
+			</div>
+			<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація" aria-hidden="true" inert>
+				<a class="nav-link" href="index.html">Головна</a>
+				<a class="nav-link" href="matches.html">Матчі</a>
+				<a class="nav-link" href="standings.html">Турнірна таблиця</a>
+				<a class="nav-link" href="news.html">Новини</a>
+				<a class="nav-link" href="team.html">Команда</a>
+				<a class="nav-link active" href="club.html" aria-current="page">Клуб</a>
+				<a class="button button-primary mobile-nav-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero club-hero" id="club-home" aria-labelledby="club-title">
+				<video class="hero-video" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+					<source src="assets/video/hero_baner_main.mp4" type="video/mp4">
+				</video>
+				<div class="hero-shade"></div>
+				<div class="hero-content">
+					<p class="eyebrow">Житомир · Україна</p>
+					<h1 id="club-title">Про клуб</h1>
+					<p class="hero-copy">Житомир. Наш клуб. Наша сила.</p>
+					<a class="button button-primary" href="#history">Наша історія <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+				</div>
+			</section>
+
+			<section class="block-spacing" id="history" aria-labelledby="history-title">
+				<div class="content-wrap">
+					<div class="section-heading"><div><p class="eyebrow">Історія та традиції</p><h2 id="history-title">Історія клубу</h2></div></div>
+					<div class="club-timeline-scroll" role="region" aria-label="Хронологія історії клубу" tabindex="0">
+						<ol class="club-timeline">
+							<li class="club-milestone"><time datetime="1959">1959</time><div><h3>Заснування клубу</h3><p>Офіційне заснування клубу під назвою «Авангард». Згодом команда носила назви «Полісся», «Автомобіліст», «спб» та «МСК Житомир».</p></div></li>
+							<li class="club-milestone"><time datetime="1967">1967</time><div><h3>Бронза чемпіонату УРСР</h3><p>«Полісся» стає бронзовим призером Чемпіонату УРСР серед команд Класу «Б».</p></div></li>
+							<li class="club-milestone"><time datetime="1992">1992</time><div><h3>Перший чемпіонат незалежної України</h3><p>Команда бере участь у першому в історії незалежної України Чемпіонаті серед команд Першої ліги.</p></div></li>
+							<li class="club-milestone"><time>2005–2016</time><div><h3>Складний період</h3><p>Клуб втрачає професійний статус і бере тривалу паузу у виступах на всеукраїнській арені.</p></div></li>
+							<li class="club-milestone"><time datetime="2016">2016</time><div><h3>Відродження клубу</h3><p>Офіційне відродження та перезапуск клубу за підтримки міської влади та спонсорів.</p></div></li>
+							<li class="club-milestone"><time>2017–2020</time><div><h3>Повернення до професійного футболу</h3><p>Повернення до Другої ліги ПФЛ і стабільний розвиток інфраструктури.</p></div></li>
+							<li class="club-milestone"><time datetime="2019-11">Листопад 2019</time><div><h3>Новий символ клубу</h3><p>Зміна брендингу та поява нового логотипа з образом вовка — символу незламності та командної зграї.</p></div></li>
+							<li class="club-milestone"><time>Сезон 2022/2023</time><div><h3>Вихід до Прем’єр-ліги</h3><p>Тріумфальний вихід до Української Прем'єр-ліги в статусі переможця Першої ліги.</p></div></li>
+							<li class="club-milestone"><time>Сезон 2023/2024</time><div><h3>Дебют в УПЛ</h3><p>Історичний дебют в УПЛ та боротьба за єврокубкові місця у першому ж сезоні на найвищому рівні.</p></div></li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			<section class="block-spacing" aria-labelledby="infrastructure-title">
+				<div class="content-wrap">
+					<div class="section-heading"><div><p class="eyebrow">Дім команди</p><h2 id="infrastructure-title">Інфраструктура</h2></div></div>
+					<div class="club-facilities grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<article class="facility-card border border-emerald-900/50 bg-[#101C1B] hover:border-lime-400/60 hover:shadow-lg hover:-translate-y-1 transition duration-300">
+							<img class="facility-image" src="assets/images/central_stadium.jpg" alt="Центральний стадіон у Житомирі" loading="lazy">
+							<div class="facility-info"><p class="eyebrow">ДОМАШНЯ АРЕНА</p><h3>ЦЕНТРАЛЬНИЙ СТАДІОН М. ЖИТОМИР</h3><p>Сучасний зелений газон, підігрів, якісне освітлення.</p><dl><div><dt>Місткість</dt><dd>~5 928 глядачів</dd></div><div><dt>Статус</dt><dd>Діючий</dd></div></dl></div>
+						</article>
+						<article class="facility-card border border-emerald-900/50 bg-[#101C1B] hover:border-lime-400/60 hover:shadow-lg hover:-translate-y-1 transition duration-300">
+							<img class="facility-image" src="assets/images/navch-tren.jpg" alt="Навчально-тренувальна база клубу" loading="lazy">
+							<div class="facility-info"><p class="eyebrow">ІНФРАСТРУКТУРА КЛУБУ</p><h3>НАВЧАЛЬНО-ТРЕНУВАЛЬНА БАЗА КЛУБУ</h3><p>Тренувальні поля та відновлювальний комплекс для першої команди.</p></div>
+						</article>
+						<article class="facility-card border border-emerald-900/50 bg-[#101C1B] hover:border-lime-400/60 hover:shadow-lg hover:-translate-y-1 transition duration-300">
+							<img class="facility-image" src="assets/images/school.jpg" alt="Будівля дитячо-юнацької школи клубу" loading="lazy">
+							<div class="facility-info"><p class="eyebrow">АКАДЕМІЯ</p><h3>ДИТЯЧО-ЮНАЦЬКА ШКОЛА</h3><p>Тренувальні поля для молодіжних команд клубу.</p></div>
+						</article>
+					</div>
+					<div class="map-wrapper w-full overflow-hidden rounded-xl shadow-lg border border-[#0EFF02]/20 my-6">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1670.4227343073833!2d28.66729796870864!3d50.24594051548034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c6484a37a6ad1%3A0xc5ca3696d22e0bf6!2z0KbQtdC90YLRgNCw0LvRjNC90LjQuSDQvNGW0YHRjNC60LjQuSDRgdGC0LDQtNGW0L7QvSDCq9Cf0L7Qu9GW0YHRgdGPwrs!5e0!3m2!1suk!2sua!4v1793567826302!5m2!1suk!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Карта розташування Центрального міського стадіону Полісся у Житомирі"></iframe>
+					</div>
+				</div>
+			</section>
+
+			<section class="block-spacing" aria-labelledby="leadership-title">
+				<div class="content-wrap">
+					<div class="section-heading"><div><p class="eyebrow">Розвиток клубу</p><h2 id="leadership-title">Напрями розвитку та мета</h2></div></div>
+					<div class="leadership-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+						<article class="leader-card"><span class="leader-icon"><i class="icon fas fa-people-group" aria-hidden="true"></i></span><p class="eyebrow">Регіон</p><h3>Розвиток дитячо-юнацького футболу в регіоні.</h3></article>
+						<article class="leader-card"><span class="leader-icon"><i class="icon fas fa-futbol" aria-hidden="true"></i></span><p class="eyebrow">Мета</p><h3>Вихід на єврокубкову арену.</h3></article>
+					</div>
+				</div>
+			</section>
+
+			<section class="block-spacing" id="contact" aria-labelledby="contact-title">
+				<div class="content-wrap">
+					<div class="contact club-contact grid-cols-1 md:grid-cols-2">
+						<div class="contact-intro"><p class="eyebrow">Зв’язок із клубом</p><h2 id="contact-title">Напишіть нам</h2><p>Для звернень, партнерських пропозицій та запитів медіа.</p></div>
+						<form class="contact-form" action="#" method="post">
+							<div class="form-row grid-cols-1 sm:grid-cols-2">
+								<div class="form-field"><label for="club-contact-name">Ім’я</label><input id="club-contact-name" name="name" type="text" autocomplete="name" required></div>
+								<div class="form-field"><label for="club-contact-email">Email</label><input id="club-contact-email" name="email" type="email" autocomplete="email" required></div>
+							</div>
+							<div class="form-field"><label for="club-contact-topic">Тема</label><select id="club-contact-topic" name="topic" required><option value="" selected disabled>Оберіть тему</option><option value="general">Загальне питання</option><option value="partners">Партнерство</option><option value="media">Медіа</option></select></div>
+							<div class="form-field"><label for="club-contact-message">Повідомлення</label><textarea id="club-contact-message" name="message" rows="5" required></textarea></div>
+							<button class="button button-primary" type="submit">Надіслати <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-main">
+				<h2 class="visually-hidden">Інформація про клуб</h2>
+				<div class="footer-brand"><a class="brand" href="index.html" aria-label="ФК Полісся, на початок сторінки"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир" loading="lazy"><span class="brand-name">ПОЛІССЯ</span></a><p>Житомир. Наш клуб. Наша сила.</p><p>Офіційний цифровий хаб Житомирського футбольного клубу «Полісся», який об'єднує вболівальників, висвітлює життя першої команди, діяльність юнацької академії та розвитку інфраструктури.</p></div>
+				<nav class="footer-column" aria-label="Навігація клубом"><h3>Клуб</h3><a href="index.html">Головна</a><a href="news.html">Новини</a><a href="matches.html">Матчі</a><a href="team.html">Команда</a><a href="club.html">Про клуб</a><a href="standings.html">Турнірна таблиця</a></nav>
+				<nav class="footer-column" aria-label="Інформація"><h3>Інформація</h3><a href="index.html#contact">Контакти</a><a href="index.html#contact">Партнерам</a><a href="index.html#contact">Пресслужба</a></nav>
+				<nav class="footer-column footer-social" aria-label="Соціальні мережі"><h3>Соціальні мережі</h3><a href="https://www.instagram.com/" aria-label="Instagram ФК Полісся">Instagram ↗</a><a href="https://www.facebook.com/" aria-label="Facebook ФК Полісся">Facebook ↗</a><a href="https://www.youtube.com/" aria-label="YouTube ФК Полісся">YouTube ↗</a></nav>
+			</div>
+			<div class="footer-bottom"><span>© 2026 ФК «Полісся» Житомир</span><a href="index.html#contact">Політика конфіденційності</a></div>
+		</footer>
+	</div>
+	<script src="assets/mobile-menu.js" defer></script>
+</body>
+</html>

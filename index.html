@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0C1112">
+	<meta name="description" content="ФК «Полісся» (Житомир) — офіційний вебсайт. Новини, матчі, турнірне становище та життя клубу.">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:title" content="ФК «Полісся» (Житомир) — Офіційний вебсайт">
+	<meta property="og:description" content="Новини, матчі, турнірне становище та життя футбольного клубу «Полісся» Житомир.">
+	<title>ФК «Полісся» (Житомир) — Офіційний вебсайт</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://cdn.tailwindcss.com">
+	<link rel="preconnect" href="https://www.youtube.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="stylesheet" href="build/dist/tailwind.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page-shell">
+		<!-- Header і nav створюють доступні орієнтири сторінки. -->
+		<header class="header">
+			<a class="brand" href="index.html" aria-label="ФК Полісся, на головну"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир"><span class="brand-name">ПОЛІССЯ</span></a>
+			<nav class="header-nav" aria-label="Головна навігація">
+				<ul>
+					<li class="active"><a class="nav-link active" href="index.html" aria-current="page">Головна</a></li>
+					<li><a href="matches.html">Матчі</a></li>
+					<li><a href="news.html">Новини</a></li>
+					<li><a href="team.html">Команда</a></li>
+					<li><a href="standings.html">Турнірна таблиця</a></li>
+					<li><a href="club.html">Клуб</a></li>
+				</ul>
+			</nav>
+			<div class="header-actions">
+				<aside class="live-widget" aria-label="Поточний матч"><a class="live-mini" href="matches.html#fixtures"><span class="live-dot" aria-hidden="true"></span><i class="icon fas fa-circle-play" aria-hidden="true"></i><span>LIVE</span><span class="live-mini-score">Полісся — Динамо</span></a></aside>
+				<a class="button button-primary header-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+				<button class="mobile-menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-nav">
+					<i class="fas fa-bars icon-open" aria-hidden="true"></i>
+					<i class="fas fa-times icon-close" aria-hidden="true"></i>
+				</button>
+			</div>
+			<nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація" aria-hidden="true" inert>
+				<a class="nav-link active" href="index.html" aria-current="page">Головна</a>
+				<a class="nav-link" href="matches.html">Матчі</a>
+				<a class="nav-link" href="standings.html">Турнірна таблиця</a>
+				<a class="nav-link" href="news.html">Новини</a>
+				<a class="nav-link" href="team.html">Команда</a>
+				<a class="nav-link" href="club.html">Клуб</a>
+				<a class="button button-primary mobile-nav-cta" href="matches.html#featured-match"><i class="icon fas fa-ticket" aria-hidden="true"></i>Квитки</a>
+			</nav>
+		</header>
+
+		<!-- Main охоплює головний вміст; h1 єдиний на сторінці. -->
+		<main>
+			<section class="hero landing-hero" id="home" aria-labelledby="page-title">
+				<div class="hero-content">
+					<p class="eyebrow">Футбольний клуб · Житомир</p>
+					<h1 id="page-title">Полісся — це більше, ніж футбол</h1>
+					<p class="hero-copy">Разом творимо історію нашого клубу.</p>
+					<a class="button button-primary" href="matches.html">До матчів <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+					<a class="button" href="#matches">На полі <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+				</div>
+				<div class="hero-visual" aria-hidden="true">
+					<video class="hero-video" autoplay muted loop playsinline tabindex="-1">
+						<source src="assets/video/hero_baner_main.mp4" type="video/mp4">
+					</video>
+					<div class="hero-shade"></div>
+				</div>
+			</section>
+
+			<div class="content-wrap">
+			<section class="matches block-spacing" id="matches" aria-labelledby="matches-title">
+				<div class="section-heading"><div class="section-title"><img class="section-icon" src="assets/icons/matches.svg" width="800" height="800" alt="" loading="lazy"><div><p class="eyebrow">Match Centre · LIVE-статус і деталі матчів</p><h2 id="matches-title">Матчі</h2></div></div><a class="text-link" href="matches.html">Усі матчі <span aria-hidden="true">↗</span></a></div>
+				<div class="match-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+					<article class="match-card match-live" aria-labelledby="live-match-title">
+						<h3 class="visually-hidden" id="live-match-title">Поточний матч: Полісся — Динамо</h3>
+						<div class="match-card-top"><span class="status-label"><span class="live-dot" aria-hidden="true"></span><i class="icon fas fa-circle-play" aria-hidden="true"></i> LIVE · УПЛ</span></div>
+						<div class="match-score" aria-live="polite" aria-atomic="true">
+							<div class="team"><span class="team-crest">П</span><span>Полісся</span></div><div class="score">LIVE</div><div class="team"><span class="team-crest team-crest-muted">Д</span><span>Динамо</span></div>
+						</div>
+						<div class="match-card-bottom"><span>Центральний стадіон</span></div>
+					</article>
+					<article class="match-card" aria-labelledby="upcoming-match-title">
+						<h3 class="visually-hidden" id="upcoming-match-title">Наступний матч: Полісся — Шахтар</h3>
+						<div class="match-card-top"><span class="status-label"><i class="fas fa-calendar-days" aria-hidden="true"></i> НАСТУПНИЙ МАТЧ · УПЛ</span></div>
+						<div class="match-score"><div class="team"><span class="team-crest">П</span><span>Полісся</span></div><div class="score upcoming-score">VS</div><div class="team"><span class="team-crest team-crest-muted">Ш</span><span>Шахтар</span></div></div>
+						<div class="match-card-bottom"><span>УПЛ · Тур 11</span></div>
+					</article>
+					<article class="match-card match-result" aria-labelledby="last-match-title">
+						<h3 class="visually-hidden" id="last-match-title">Останній результат: Полісся — Колос</h3>
+						<div class="match-card-top"><span class="status-label"><i class="fas fa-flag-checkered" aria-hidden="true"></i> ОСТАННІЙ РЕЗУЛЬТАТ · УПЛ · ТУР 10</span></div>
+						<div class="match-score"><div class="team"><span class="team-crest">П</span><span>Полісся</span></div><div class="score">2 <span>:</span> 1</div><div class="team"><span class="team-crest team-crest-muted">К</span><span>Колос</span></div></div>
+						<div class="match-card-bottom"><span>УПЛ · Тур 10</span><a href="news.html">Огляд матчу <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+					</article>
+				</div>
+			</section>
+
+			<section class="news block-spacing" id="news" aria-labelledby="news-title">
+				<div class="section-heading"><div class="section-title"><img class="section-icon" src="assets/icons/news.svg" width="700" height="700" alt="" loading="lazy"><div><p class="eyebrow">Хронологічна стрічка · Команда · Тренування · Академія</p><h2 id="news-title">Новини клубу</h2></div></div><a class="text-link" href="news.html">Усі новини <span aria-hidden="true">↗</span></a></div>
+				<div class="news-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+					<article class="news-item">
+						<a href="news-polissya-novyi-rozdil.html" aria-label="Дивитися огляд матчу Полісся — Новий Розділ">
+							<div class="news-image news-image-featured news-video-preview" role="img" aria-label="Відеоогляд матчу Полісся — Новий Розділ"><i class="fas fa-play-circle" aria-hidden="true"></i></div>
+						</a>
+						<div class="news-meta"><span class="category">#MatchDay</span><span class="category">#КубокУкраїни</span></div>
+						<h3><a href="news-polissya-novyi-rozdil.html">Огляд матчу: Полісся – Новий Розділ | 1/8 фіналу Кубка України</a></h3>
+						<p>Яскрава перемога житомирян у кубковому протистоянні. Дивіться відеоогляд найкращих моментів та забитих м'ячів.</p>
+						<a class="text-link" href="news-polissya-novyi-rozdil.html">Дивитися огляд <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+					</article>
+					<article class="news-item news-featured">
+						<div class="news-image news-image-featured" role="img" aria-label="Футболісти Полісся святкують перемогу"></div>
+						<div class="news-meta"><span class="category"><i class="fas fa-futbol" aria-hidden="true"></i> КОМАНДА</span></div>
+						<h3><a href="news.html">Полісся вириває перемогу в матчі туру</a></h3><p>Головне про гру та емоції команди після фінального свистка.</p>
+					</article>
+					<article class="news-item">
+						<div class="news-image news-image-training" role="img" aria-label="Тренування команди на футбольному полі"></div>
+						<div class="news-meta"><span class="category"><i class="fas fa-dumbbell" aria-hidden="true"></i> ТРЕНУВАННЯ</span></div><h3><a href="news.html">Команда готується до наступного матчу.</a></h3>
+					</article>
+				</div>
+			</section>
+
+			<section class="standings block-spacing" id="standings" aria-labelledby="standings-title">
+				<div class="section-heading"><div class="section-title"><img class="section-icon" src="assets/icons/table.svg" width="730" height="730" alt="" loading="lazy"><div><p class="eyebrow">Адаптивна таблиця УПЛ</p><h2 id="standings-title">Турнірна таблиця</h2></div></div><span class="league-label">УПЛ</span></div>
+				<div class="standings-table-wrap">
+					<table class="standings-table">
+						<caption class="visually-hidden">Турнірне становище команд Української Прем'єр-ліги</caption>
+						<thead><tr><th scope="col">#</th><th scope="col">Команда</th><th scope="col">І</th><th scope="col">В</th><th scope="col">Н</th><th scope="col">П</th><th scope="col">О</th></tr></thead>
+						<tbody>
+							<tr><td>1</td><td>Шахтар Донецьк</td><td>11</td><td>9</td><td>1</td><td>1</td><td>28</td></tr>
+							<tr class="standings-current"><td>2</td><td><strong>Полісся Житомир</strong></td><td>10</td><td>8</td><td>1</td><td>1</td><td><strong>25</strong></td></tr>
+							<tr><td>3</td><td>Харків</td><td>9</td><td>7</td><td>0</td><td>2</td><td>21</td></tr>
+							<tr><td>4</td><td>Динамо Київ</td><td>9</td><td>6</td><td>1</td><td>2</td><td>19</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="standings-note">Показники: ігри, перемоги, нічиї, поразки та очки.</p>
+			</section>
+
+			<section class="contact block-spacing grid-cols-1 md:grid-cols-2" id="contact" aria-labelledby="contact-title">
+				<div class="contact-intro"><h2 id="contact-title">Ми на зв'язку. Напишіть нам</h2><p>Запитання, пропозиції або партнерство — будемо раді почути вас.</p></div>
+				<form class="contact-form" action="#" method="post">
+					<div class="form-row grid-cols-1 sm:grid-cols-2">
+						<div class="form-field"><label for="contact-name">Ім'я</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div>
+						<div class="form-field"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div>
+					</div>
+					<div class="form-field"><label for="contact-topic">Тема звернення</label><select id="contact-topic" name="topic" required><option value="" selected disabled>Оберіть тему</option><option value="fans">Звернення вболівальника</option><option value="partners">Партнерство</option><option value="media">Запит медіа</option><option value="other">Інше</option></select></div>
+					<div class="form-field"><label for="contact-message">Повідомлення</label><textarea id="contact-message" name="message" rows="5" required></textarea></div>
+					<button class="button button-primary" type="submit">Надіслати повідомлення <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+				</form>
+				<div class="map-wrapper w-full overflow-hidden rounded-xl shadow-lg border border-[#0EFF02]/20 my-6">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1670.4227343073833!2d28.66729796870864!3d50.24594051548034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c6484a37a6ad1%3A0xc5ca3696d22e0bf6!2z0KbQtdC90YLRgNCw0LvRjNC90LjQuSDQvNGW0YHRjNC60LjQuSDRgdGC0LDQtNGW0L7QvSDCq9Cf0L7Qu9GW0YHRgdGPwrs!5e0!3m2!1suk!2sua!4v1793567826302!5m2!1suk!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Карта розташування Центрального міського стадіону Полісся у Житомирі"></iframe>
+				</div>
+			</section>
+			</div>
+		</main>
+
+		<!-- Навігація футера згрупована в окремі підписані nav-орієнтири. -->
+		<footer class="footer">
+			<div class="footer-main">
+				<h2 class="visually-hidden">Інформація про клуб</h2>
+				<div class="footer-brand"><a class="brand" href="index.html" aria-label="ФК Полісся, на початок сторінки"><img class="brand-mark" src="assets/icons/logo.png" width="1024" height="1024" alt="Логотип футбольного клубу «Полісся» Житомир" loading="lazy"><span class="brand-name">ПОЛІССЯ</span></a><p>Житомир. Наш клуб. Наша сила.</p><p>Офіційний цифровий хаб Житомирського футбольного клубу «Полісся», який об'єднує вболівальників, висвітлює життя першої команди, діяльність юнацької академії та розвитку інфраструктури.</p></div>
+				<nav class="footer-column" aria-label="Навігація клубом"><h3>Клуб</h3><a href="index.html">Головна</a><a href="news.html">Новини</a><a href="matches.html">Матчі</a><a href="team.html">Команда</a><a href="club.html">Про клуб</a><a href="standings.html">Турнірна таблиця</a></nav>
+				<nav class="footer-column" aria-label="Інформація"><h3>Інформація</h3><a href="index.html#contact">Контакти</a><a href="index.html#contact">Партнерам</a><a href="index.html#contact">Пресслужба</a></nav>
+				<nav class="footer-column footer-social" aria-label="Соціальні мережі"><h3>Соціальні мережі</h3><a href="https://www.instagram.com/" aria-label="Instagram ФК Полісся">Instagram ↗</a><a href="https://www.facebook.com/" aria-label="Facebook ФК Полісся">Facebook ↗</a><a href="https://www.youtube.com/" aria-label="YouTube ФК Полісся">YouTube ↗</a></nav>
+			</div>
+			<div class="footer-bottom"><span>© 2026 ФК «Полісся» Житомир</span><a href="index.html#contact">Політика конфіденційності</a></div>
+		</footer>
+	</div>
+	<script src="assets/mobile-menu.js" defer></script>
+</body>
+</html>
