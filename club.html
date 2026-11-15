@@ -121,16 +121,42 @@
 			<section class="block-spacing" id="contact" aria-labelledby="contact-title">
 				<div class="content-wrap">
 					<div class="contact club-contact grid-cols-1 md:grid-cols-2">
-						<div class="contact-intro"><p class="eyebrow">Зв’язок із клубом</p><h2 id="contact-title">Напишіть нам</h2><p>Для звернень, партнерських пропозицій та запитів медіа.</p></div>
-						<form class="contact-form" action="#" method="post">
-							<div class="form-row grid-cols-1 sm:grid-cols-2">
-								<div class="form-field"><label for="club-contact-name">Ім’я</label><input id="club-contact-name" name="name" type="text" autocomplete="name" required></div>
-								<div class="form-field"><label for="club-contact-email">Email</label><input id="club-contact-email" name="email" type="email" autocomplete="email" required></div>
+						<div class="contact-intro px-4 sm:px-0"><p class="eyebrow">Зв’язок із клубом</p><h2 id="contact-title">Напишіть нам</h2><p>Для звернень, партнерських пропозицій та запитів медіа.</p></div>
+						<form id="feedbackForm" class="contact-form mx-auto w-full max-w-2xl px-4 py-5 sm:p-0" action="#" method="post" novalidate>
+							<div class="form-row grid-cols-1 md:grid-cols-2">
+								<div class="form-field contact-field">
+									<label for="userName">Ім’я</label>
+									<input class="min-h-12 transition-colors hover:border-[#0EFF02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0EFF02]" id="userName" name="userName" type="text" autocomplete="name" aria-describedby="nameError" required>
+									<p id="nameError" class="field-error hidden text-red-500 text-xs" aria-live="polite">Будь ласка, введіть коректне ім'я (від 2 до 50 літер без цифр)</p>
+								</div>
+								<div class="form-field contact-field">
+									<label for="userEmail">Електронна пошта</label>
+									<input class="min-h-12 transition-colors hover:border-[#0EFF02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0EFF02]" id="userEmail" name="userEmail" type="email" autocomplete="email" aria-describedby="emailError" required>
+									<p id="emailError" class="field-error hidden text-red-500 text-xs" aria-live="polite">Введіть коректну електронну адресу (приклад: name@domain.com)</p>
+								</div>
 							</div>
-							<div class="form-field"><label for="club-contact-topic">Тема</label><select id="club-contact-topic" name="topic" required><option value="" selected disabled>Оберіть тему</option><option value="general">Загальне питання</option><option value="partners">Партнерство</option><option value="media">Медіа</option></select></div>
-							<div class="form-field"><label for="club-contact-message">Повідомлення</label><textarea id="club-contact-message" name="message" rows="5" required></textarea></div>
-							<button class="button button-primary" type="submit">Надіслати <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+							<div class="form-field contact-field">
+								<label for="userPhone">Телефон</label>
+								<input class="h-12 min-h-12 transition-colors hover:border-[#0EFF02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0EFF02]" id="userPhone" name="userPhone" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="phoneError" required>
+								<p id="phoneError" class="field-error hidden text-red-500 text-xs" aria-live="polite">Вкажіть номер телефону у форматі +380XXXXXXXXX</p>
+							</div>
+							<div class="form-field contact-field">
+								<label for="userMessage">Повідомлення</label>
+								<textarea class="min-h-32 transition-colors hover:border-[#0EFF02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0EFF02]" id="userMessage" name="userMessage" rows="5" aria-describedby="messageError" required></textarea>
+								<p id="messageError" class="field-error hidden text-red-500 text-xs" aria-live="polite">Повідомлення має містити від 10 до 500 символів</p>
+							</div>
+							<div class="form-consent contact-consent flex flex-wrap items-center gap-2">
+								<input class="h-4 w-4 accent-[#0EFF02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0EFF02]" id="privacyConsent" name="privacyConsent" type="checkbox" aria-describedby="privacyConsentError" required>
+								<label for="privacyConsent">Погоджуюся з політикою конфіденційності</label>
+								<p id="privacyConsentError" class="field-error hidden basis-full text-red-500 text-xs" aria-live="polite">Необхідно дати згоду на обробку персональних даних</p>
+							</div>
+							<button class="button button-primary min-h-12 w-full px-6 sm:w-auto" type="submit">Надіслати повідомлення <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
 						</form>
+						<dialog id="successDialog" class="fixed inset-0 m-auto w-[calc(100%-2rem)] max-w-md rounded-xl border border-[#0EFF02]/30 bg-[#101C1B] p-6 text-white shadow-2xl backdrop:bg-black/70" aria-labelledby="successDialogTitle" aria-describedby="successDialogDescription">
+							<h2 id="successDialogTitle" class="mb-3 text-xl font-bold text-[#0EFF02]" tabindex="-1">Повідомлення надіслано</h2>
+							<p id="successDialogDescription" class="my-[30px] text-sm text-white/80">Дякуємо! Вашу форму успішно заповнено.</p>
+							<button class="button button-primary min-h-12 w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0EFF02] sm:w-auto" id="successDialogClose" type="button">Закрити</button>
+						</dialog>
 					</div>
 				</div>
 			</section>
@@ -148,5 +174,6 @@
 		</footer>
 	</div>
 	<script src="assets/mobile-menu.js" defer></script>
+	<script src="js/contact-validation.js" defer></script>
 </body>
 </html>

@@ -1124,7 +1124,7 @@ textarea:focus-visible {
 
 .contact-form {
   display: grid;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .contact-form,
@@ -1138,7 +1138,8 @@ textarea:focus-visible {
 
 .form-row {
   display: grid;
-  gap: 14px;
+  row-gap: var(--spacing-sm);
+  column-gap: var(--spacing-md);
 }
 
 :where(.form-row:not(.grid-cols-1)) {
@@ -1152,20 +1153,26 @@ textarea:focus-visible {
 
 .form-field label {
   color: var(--color-text);
-  font-size: var(--fs-caption);
+  font-size: var(--fs-base);
   font-weight: var(--fw-bold);
 }
 
 .form-field input, 
 .form-field select, 
 .form-field textarea {
+  box-sizing: border-box;
   width: 100%;
-  min-height: 45px;
-  padding: 11px 13px;
+  height: 48px;
+  padding: 12px 16px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-bg);
   color: var(--color-text);
+}
+
+.contact-form .form-field > p,
+.contact-form .form-consent > p {
+  margin: 0;
 }
 
 .form-field input:focus, 
@@ -1176,8 +1183,48 @@ textarea:focus-visible {
 }
 
 .form-field textarea {
-  min-height: 130px;
+  height: 160px;
+  min-height: 160px;
   resize: vertical;
+}
+
+.contact-field {
+  grid-template-rows: auto auto auto;
+}
+
+.contact-field input,
+.contact-field textarea {
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.contact-field textarea {
+  height: 160px;
+}
+
+.contact-field .field-error,
+.contact-consent .field-error {
+  height: auto;
+  min-height: 0;
+  flex: 0 0 100%;
+}
+
+.contact-field.is-invalid input,
+.contact-field.is-invalid textarea,
+.contact-consent.is-invalid input {
+  border-color: #ef4444;
+}
+
+.contact-field.is-valid input,
+.contact-field.is-valid textarea {
+  border-color: #22c55e;
+}
+
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible,
+.contact-consent input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .form-field select:invalid {
@@ -1363,8 +1410,7 @@ textarea:focus-visible {
 /* Mobile: stack facility details. */
 @media (max-width: 767.98px) {
   .club-contact {
-    gap: var(--spacing-lg);
-    padding: var(--spacing-md);
+    padding: calc(var(--spacing-xl) / 6);
   }
 
   .facility-info dl div {
