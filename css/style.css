@@ -843,9 +843,8 @@ textarea:focus-visible {
   width: 100%;
   min-width: 0;
   margin-top: var(--spacing-md);
-  overflow: auto;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  box-sizing: border-box;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
@@ -856,7 +855,7 @@ textarea:focus-visible {
   outline-offset: 3px;
 }
 
-.standings-widget-wrap .aiscore-standings {
+.standings-widget-wrap .sofascore-standings {
   width: 100% !important;
   max-width: 100%;
   min-width: 0;
@@ -865,14 +864,30 @@ textarea:focus-visible {
   border-radius: inherit;
 }
 
-.standings-widget-wrap .aiscore-standings iframe {
+.standings-widget-wrap .sofascore-standings iframe {
   display: block;
   width: 100%;
   max-width: 100%;
-  height: 968.4px;
-  min-height: 968.4px;
+  height: 963px;
   box-sizing: border-box;
   border: 0;
+  border-radius: var(--radius-md);
+}
+
+.standings-widget-wrap .sofascore-attribution {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 12px;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+.standings-widget-wrap .sofascore-attribution a {
+  color: var(--color-primary);
 }
 
 /* ========================================================================
