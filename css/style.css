@@ -837,56 +837,65 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   7. STANDINGS TABLE
+   7. LIVE STANDINGS WIDGET
    ========================================================================== */
-.standings-table-wrap {
-  overflow-x: auto;
-  border-top: 1px solid var(--color-border);
-}
-
-.standings-table {
+.standings-widget-wrap {
   width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+  min-width: 0;
+  margin-top: var(--spacing-md);
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
 }
 
-.standings-table th, 
-.standings-table td {
-  padding: 14px var(--spacing-md);
-  border-bottom: 1px solid var(--color-border);
-  font-size: var(--fs-sm);
+.standings-widget-wrap:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
-.standings-table th {
-  color: var(--color-text-muted);
-  font-size: var(--fs-caption-sm);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.standings-widget-wrap .scoreaxis-widget {
+  width: 100% !important;
+  max-width: 100%;
+  min-width: 0;
+  height: 760px !important;
+  min-height: 760px;
+  box-sizing: border-box;
+  overflow: auto;
+  border: 0 !important;
+  border-radius: inherit;
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
 }
 
-.standings-table th:first-child, 
-.standings-table td:first-child {
-  width: 48px;
+.standings-widget-wrap .scoreaxis-widget iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 760px !important;
+  min-height: 760px;
+  border: 0;
 }
 
-.standings-table th:not(:nth-child(2)), 
-.standings-table td:not(:nth-child(2)) {
-  text-align: center;
-}
-
-.standings-current {
-  background: rgba(14, 255, 2, 0.07);
-}
-
-.standings-current td:first-child, 
-.standings-current td:last-child {
-  color: var(--color-primary);
-}
-
-.standings-note {
-  margin: 12px 0 0;
+.standings-widget-wrap .widget-main-link {
+  padding: 8px 12px !important;
+  border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
   font-size: var(--fs-caption);
+}
+
+.standings-widget-wrap .widget-main-link a {
+  color: var(--color-primary) !important;
+}
+
+@media (max-width: 767.98px) {
+  .standings-widget-wrap .scoreaxis-widget,
+  .standings-widget-wrap .scoreaxis-widget iframe {
+    height: 820px !important;
+    min-height: 820px;
+  }
 }
 
 /* ========================================================================
@@ -1896,178 +1905,10 @@ textarea:focus-visible {
   font-size: var(--fs-xs);
 }
 
-.standings-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
-}
-
-.standings-update {
-  color: var(--color-text-muted);
-  font-size: var(--fs-xs);
-}
-
-.standings-table-wrap {
-  margin-top: var(--spacing-md);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface);
-}
-
-.standings-table {
-  min-width: 980px;
-}
-
-.standings-table th,
-.standings-table td {
-  white-space: nowrap;
-}
-
-.standings-table tbody tr {
-  transition: background-color var(--transition-fast);
-}
-
-.standings-table tbody tr:hover {
-  background: var(--color-surface);
-}
-
-.standings-table tbody tr.standings-polissya {
-  background: rgba(14, 255, 2, 0.1);
-  font-weight: var(--fw-bold);
-}
-
-.standings-table tbody tr.standings-polissya th,
-.standings-table tbody tr.standings-polissya td {
-  font-weight: var(--fw-bold);
-}
-
-.standings-table tbody tr.standings-polissya th,
-.standings-table tbody tr.standings-polissya td:first-child,
-.standings-table tbody tr.standings-polissya td:nth-last-child(2) {
-  color: var(--color-primary);
-}
-
-.standings-table tbody tr.zone-champions td:first-child {
-  border-left: 3px solid var(--color-primary);
-}
-
-.standings-table tbody tr.zone-conference td:first-child {
-  border-left: 3px solid var(--color-secondary);
-}
-
-.standings-table tbody tr.zone-relegation td:first-child {
-  border-left: 3px solid var(--color-secondary);
-}
-
-.table-team {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  font-weight: var(--fw-semibold);
-}
-
-.table-team-logo,
-.team-monogram {
-  display: inline-grid;
-  width: 28px;
-  height: 28px;
-  flex: 0 0 28px;
-  place-items: center;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  background: var(--color-bg);
-  color: var(--color-text);
-  object-fit: contain;
-}
-
-.table-team-logo {
-  padding: 3px;
-}
-
-.team-monogram {
-  font-family: var(--font-heading);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-bold);
-}
-
-.form-list {
-  display: inline-flex;
-  gap: var(--spacing-xs);
-}
-
-.form-result {
-  display: inline-grid;
-  width: 22px;
-  height: 22px;
-  place-items: center;
-  border-radius: var(--radius-md);
-  color: var(--color-bg);
-  font-size: var(--fs-caption-sm);
-  font-weight: var(--fw-bold);
-}
-
-.form-result.win {
-  background: var(--color-primary);
-}
-
-.form-result.draw {
-  background: var(--color-text-muted);
-  color: var(--color-bg);
-}
-
-.form-result.loss {
-  background: var(--color-secondary);
-  color: var(--color-text);
-}
-
-.standings-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0 0;
-  padding: 0;
-  color: var(--color-text-muted);
-  font-size: var(--fs-xs);
-  list-style: none;
-}
-
-.standings-legend li {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.zone-marker {
-  width: 10px;
-  height: 10px;
-  border-radius: var(--radius-full);
-}
-
-.zone-marker-champions {
-  background: var(--color-primary);
-}
-
-.zone-marker-conference {
-  background: var(--color-secondary);
-}
-
-.zone-marker-relegation {
-  background: var(--color-secondary);
-}
-
-/* Mobile: stack the standings controls and legend. */
 @media (max-width: 767.98px) {
   .tournament-switcher .button {
     min-height: 40px;
     padding-inline: var(--spacing-md);
-  }
-
-  .standings-legend {
-    flex-direction: column;
-    gap: var(--spacing-sm);
   }
 }
 
