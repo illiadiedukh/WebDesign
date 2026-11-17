@@ -32,7 +32,7 @@ const fieldDefinitions = [
 ];
 
 function isUsernameValid(value) {
-	return value.trim().length >= 2;
+	return /^[\p{L}\s'’ʼ-]{2,50}$/u.test(value.trim());
 }
 
 function isEmailValid(value) {
@@ -86,7 +86,8 @@ function normalizePhoneInput(
 }
 
 function isMessageValid(value) {
-	return value.trim().length >= 10;
+	const length = Array.from(value.trim()).length;
+	return length >= 10 && length <= 500;
 }
 
 function isAgreementValid(control) {
@@ -142,7 +143,18 @@ document.querySelectorAll("#feedbackForm, .contact-form").forEach((form) => {
 	});
 	const successDialog = document.getElementById("successDialog");
 	const closeDialogButton = document.getElementById("successDialogClose");
+	const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+	const submissionStatus = document.createElement("p");
 	let returnFocusTarget;
+	let isSubmitting = false;
+
+	submissionStatus.className = "form-submit-error text-red-500 text-sm";
+	submissionStatus.setAttribute("role", "alert");
+	submissionStatus.setAttribute("aria-live", "assertive");
+	submissionStatus.hidden = true;
+	if (submitButton) {
+		submitButton.insertAdjacentElement("afterend", submissionStatus);
+	}
 
 	if (successDialog && closeDialogButton) {
 		closeDialogButton.addEventListener("click", () => {
@@ -202,11 +214,98 @@ document.querySelectorAll("#feedbackForm, .contact-form").forEach((form) => {
 			return;
 		}
 
-		if (successDialog && closeDialogButton) {
-			event.preventDefault();
-			returnFocusTarget = event.submitter ?? form.querySelector('[type="submit"]');
-			successDialog.showModal();
-			closeDialogButton.focus();
+		event.preventDefault();
+		if (isSubmitting) {
+			return;
 		}
+
+		isSubmitting = true;
+		submissionStatus.hidden = true;
+		submissionStatus.textContent = "";
+		returnFocusTarget = event.submitter ?? submitButton;
+
+		const originalButtonContent = submitButton?.innerHTML;
+		if (submitButton) {
+			submitButton.disabled = true;
+			submitButton.setAttribute("aria-busy", "true");
+			submitButton.textContent = "Надсилання…";
+		}
+
+		const formData = new FormData(form);
+		const payload = {
+			userName: formData.get("userName"),
+			userEmail: formData.get("userEmail"),
+			userPhone: formData.get("userPhone"),
+			userMessage: formData.get("userMessage"),
+			privacyConsent: formData.has("privacyConsent")
+		};
+
+		(async () => {
+			try {
+				let response;
+				try {
+					response = await fetch(form.dataset.endpoint || "send.php", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+							"Accept": "application/json"
+						},
+						body: JSON.stringify(payload)
+					});
+				} catch {
+					submissionStatus.textContent = "Не вдалося з’єднатися із сервером. Перевірте з’єднання та спробуйте ще раз.";
+					submissionStatus.hidden = false;
+					return;
+				}
+
+				let result;
+				try {
+					result = JSON.parse(await response.text());
+				} catch {
+					const contentType = response.headers.get("content-type") || "";
+					submissionStatus.textContent = contentType.includes("application/json")
+						? "Сервер повернув некоректну відповідь. Спробуйте пізніше."
+						: "Сервер не обробив send.php. Запустіть сайт через PHP-сервер, а не Live Server або відкриття HTML-файлу.";
+					submissionStatus.hidden = false;
+					return;
+				}
+
+				if (!response.ok || !result || typeof result !== "object" || result.success !== true) {
+					submissionStatus.textContent = typeof result?.message === "string"
+						? result.message
+						: "Не вдалося надіслати повідомлення. Спробуйте ще раз пізніше.";
+					submissionStatus.hidden = false;
+					return;
+				}
+
+				form.reset();
+				fields.forEach(({ control, error }) => {
+					control.classList.remove("border-red-500", "border-green-500");
+					control.removeAttribute("aria-invalid");
+					control.removeAttribute("data-touched");
+					control.closest(".contact-field, .form-field, .contact-consent, .form-consent")
+						?.classList.remove("is-invalid", "is-valid");
+					error.textContent = "";
+					error.classList.add("hidden");
+					error.classList.remove("block");
+				});
+
+				if (successDialog && closeDialogButton) {
+					successDialog.showModal();
+					closeDialogButton.focus();
+				}
+			} catch (error) {
+				console.error("Contact form submission failed:", error);
+				submissionStatus.textContent = "Не вдалося надіслати повідомлення. Спробуйте ще раз пізніше.";
+				submissionStatus.hidden = false;
+			} finally {
+				isSubmitting = false;
+				if (submitButton) {
+					submitButton.disabled = false;
+					submitButton.removeAttribute("aria-busy");
+					submitButton.innerHTML = originalButtonContent;
+				}
+			}
+		})();
 	});
 });
