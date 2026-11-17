@@ -228,52 +228,46 @@ document.querySelectorAll("#feedbackForm, .contact-form").forEach((form) => {
 		if (submitButton) {
 			submitButton.disabled = true;
 			submitButton.setAttribute("aria-busy", "true");
-			submitButton.textContent = "Надсилання…";
+			submitButton.replaceChildren(document.createTextNode("Надсилання… "));
+			const spinner = document.createElement("i");
+			spinner.className = "fas fa-spinner fa-spin";
+			spinner.setAttribute("aria-hidden", "true");
+			submitButton.append(spinner);
 		}
-
-		const formData = new FormData(form);
-		const payload = {
-			userName: formData.get("userName"),
-			userEmail: formData.get("userEmail"),
-			userPhone: formData.get("userPhone"),
-			userMessage: formData.get("userMessage"),
-			privacyConsent: formData.has("privacyConsent")
-		};
 
 		(async () => {
 			try {
 				let response;
 				try {
-					response = await fetch(form.dataset.endpoint || "send.php", {
+					response = await fetch(form.action, {
 						method: "POST",
 						headers: {
-							"Content-Type": "application/json",
 							"Accept": "application/json"
 						},
-						body: JSON.stringify(payload)
+						body: new FormData(form)
 					});
 				} catch {
-					submissionStatus.textContent = "Не вдалося з’єднатися із сервером. Перевірте з’єднання та спробуйте ще раз.";
+					submissionStatus.textContent = "Не вдалося з’єднатися з Formspree. Перевірте підключення до інтернету та спробуйте ще раз.";
 					submissionStatus.hidden = false;
 					return;
 				}
 
-				let result;
-				try {
-					result = JSON.parse(await response.text());
-				} catch {
-					const contentType = response.headers.get("content-type") || "";
-					submissionStatus.textContent = contentType.includes("application/json")
-						? "Сервер повернув некоректну відповідь. Спробуйте пізніше."
-						: "Сервер не обробив send.php. Запустіть сайт через PHP-сервер, а не Live Server або відкриття HTML-файлу.";
-					submissionStatus.hidden = false;
-					return;
-				}
-
-				if (!response.ok || !result || typeof result !== "object" || result.success !== true) {
-					submissionStatus.textContent = typeof result?.message === "string"
-						? result.message
-						: "Не вдалося надіслати повідомлення. Спробуйте ще раз пізніше.";
+				if (!response.ok) {
+					let errorMessage = "Formspree не прийняв повідомлення. Перевірте поля та спробуйте ще раз.";
+					try {
+						const result = await response.json();
+						const validationMessages = Array.isArray(result.errors)
+							? result.errors
+								.map((error) => error.message)
+								.filter((message) => typeof message === "string")
+							: [];
+						if (validationMessages.length) {
+							errorMessage = validationMessages.join(" ");
+						}
+					} catch {
+						// Keep the generic message when Formspree doesn't return JSON.
+					}
+					submissionStatus.textContent = errorMessage;
 					submissionStatus.hidden = false;
 					return;
 				}
